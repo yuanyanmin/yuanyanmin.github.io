@@ -17,16 +17,7 @@
 <meta property="og:description" content="Learing MarkDown and build a personal blog with hexo. 前言很早之前就想着做一个自己的博客，在了解了Git后终于知道了怎么实现。故…">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://yuanyanmin.github.io/photo/first/first_1.png">
-<meta property="og:image" content="https://yuanyanmin.github.io/photo/first/first_2.png">
-<meta property="og:image" content="https://yuanyanmin.github.io/photo/first/first_3.png">
-<meta property="og:image" content="https://yuanyanmin.github.io/photo/first/first_4.png">
-<meta property="og:image" content="https://yuanyanmin.github.io/photo/first/first_5.png">
-<meta property="og:image" content="https://yuanyanmin.github.io/photo/first/first_6.png">
-<meta property="og:image" content="https://yuanyanmin.github.io/photo/first/first_7.png">
-<meta property="og:image" content="https://yuanyanmin.github.io/photo/first/first_8.png">
-<meta property="og:image" content="https://yuanyanmin.github.io/photo/first/first_9.png">
-<meta property="og:image" content="https://yuanyanmin.github.io/photo/first/first_10.png">
-<meta property="og:updated_time" content="2018-05-27T12:51:40.390Z">
+<meta property="og:updated_time" content="2018-05-28T06:07:25.276Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 初次学习">
 <meta name="twitter:description" content="Learing MarkDown and build a personal blog with hexo. 前言很早之前就想着做一个自己的博客，在了解了Git后终于知道了怎么实现。故…">
@@ -221,18 +212,19 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Learing MarkDown and build a personal blog with hexo.</p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>很早之前就想着做一个自己的博客，在了解了Git后终于知道了怎么实现。故…<br><a id="more"></a></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>很早之前就想着做一个自己的博客，在了解了Git后终于知道了怎么实现。故…</p>
+<a id="more"></a>
 <h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><hr>
 <h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p>我的电脑是window，所以下来的均以window为环境。<br>首先登陆<a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js官网</a>,选择合适的版本，下载安装。</p>
 <h2 id="安装git客户端"><a href="#安装git客户端" class="headerlink" title="安装git客户端"></a>安装git客户端</h2><p>登陆<a href="https://git-scm.com/" target="_blank" rel="noopener">git官网</a>,选择合适的版本下载安装。Git安装教程可以看<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的官方网址</a>,或者自己搜其他博客。</p>
 <h1 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h1><p>再安装完node.js 和 git 后,开始搭建博客。</p>
 <p>首先建立一个Blog文件夹，用于存放相关文件。右键选择Git Bash Here进入git的命令行。</p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p><img src="/photo/first/first_1.png" alt=""></p>
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p><img src="/photo/first/first_2.png" alt=""></p>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init    #初始化hexo环境</span><br></pre></td></tr></table></figure>
 <p>hexo 会自动生成一个目录结构。如下图；</p>
-<p><img src="/photo/first/first_3.png" alt=""></p>
+<p><img src="/photo/first/first_1.png" alt=""></p>
 <p>依次执行下面的命令</p>
-<p><img src="/photo/first/first_4.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install    #安装npm依赖包</span><br><span class="line">$ hexo generate  #生成静态页面</span><br><span class="line">$ hexo server    #生成本地服务</span><br></pre></td></tr></table></figure>
 <p>打开浏览器输入 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 即可访问自己的博客。</p>
 <h2 id="目录介绍"><a href="#目录介绍" class="headerlink" title="目录介绍"></a>目录介绍</h2><p><strong>_config.yml</strong></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;全局配置文件，网站的很多信息都在这里配置，诸如网站名称，副标题，描述，作者，语言，主题，部署等等参数。</p>
@@ -250,21 +242,21 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;网站的主题目录。每一个子目录就是一个主题，可以自己下载自己喜欢的主题。</p>
 <h2 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h2><p>我使用的是 <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">yilia</a>,直接从GitHub 上下载压缩包解压到themes 文件夹</p>
 <p>或者使用git 命令 clone 到themes文件夹</p>
-<p><img src="/photo/first/first_5.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
 <p>然后修改根目录 _config.yml中的 theme:landscape 改为： themes: yilia.</p>
 <p>然后执行 hexo generate 重新生成。如果出现一些问题，可以先执行hexo clean清理一下public内容，然后重新生成。</p>
 <p>执行hexo server  就可以在本地查看到新主题的博客了。</p>
 <h2 id="将本地博客发布到Github上"><a href="#将本地博客发布到Github上" class="headerlink" title="将本地博客发布到Github上"></a>将本地博客发布到Github上</h2><h3 id="创建远程仓库"><a href="#创建远程仓库" class="headerlink" title="创建远程仓库"></a>创建远程仓库</h3><p>创建的仓库 yourname.github.io 。yourname 为自己github的名字。</p>
 <h3 id="与连接GitHub仓库"><a href="#与连接GitHub仓库" class="headerlink" title="与连接GitHub仓库"></a>与连接GitHub仓库</h3><p>编辑根目录下的_config.yml,配置其中 deploy 的部分。</p>
-<p><img src="/photo/first/first_6.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repo: https://github.com/yourname/yourname.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
 <p>然后gitBash,执行</p>
-<p><img src="/photo/first/first_7.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 <p>最后提交自己的博客</p>
-<p><img src="/photo/first/first_8.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>在浏览器中输入 <a href="https://yourname.github.io/" target="_blank" rel="noopener">https://yourname.github.io/</a> 即可看到自己搭建的博客了。</p>
-<h3 id="常用的hexo-命令"><a href="#常用的hexo-命令" class="headerlink" title="常用的hexo 命令"></a>常用的hexo 命令</h3><p><img src="/photo/first/first_9.png" alt=""></p>
+<h3 id="常用的hexo-命令"><a href="#常用的hexo-命令" class="headerlink" title="常用的hexo 命令"></a>常用的hexo 命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;postName&quot;  #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate   #生成静态页面至public目录</span><br><span class="line">hexo server  #开启预览访问端口</span><br><span class="line">hexo deploy  #部署到Github</span><br><span class="line">hexo help    #查看帮助</span><br><span class="line">hexo clean   #清除缓存</span><br><span class="line">hexo version  #查看hexo 版本</span><br></pre></td></tr></table></figure>
 <p>组合命令</p>
-<p><img src="/photo/first/first_10.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo s -g   #生成并本地预览</span><br><span class="line">hexo d -g   #生成并上传</span><br></pre></td></tr></table></figure>
 <hr>
 <h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>本文是我搭建过程中的一些记录，难免有错误和疏漏，欢迎大家指出。</p>
 
@@ -388,7 +380,7 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Hexo 文章目录
+          Hexo 实现文章目录
         
       </div>
     </a>
