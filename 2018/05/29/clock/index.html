@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yuanyanmin.github.io">
-  <title>Archives: 2018 | YYM&#39;s Blog</title>
+  <title>clock | YYM&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="YYM&#39;s Blog">
-<meta property="og:url" content="https://yuanyanmin.github.io/archives/2018/index.html">
+  <meta name="description" content="利用定时器实现时钟的功能 概述1.先画好时钟，时针、分针、秒针等。2.运用定时器，获取当前时间，并计算时分秒。3.让针转动。">
+<meta name="keywords" content="learning-JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="clock">
+<meta property="og:url" content="https://yuanyanmin.github.io/2018/05/29/clock/index.html">
 <meta property="og:site_name" content="YYM&#39;s Blog">
+<meta property="og:description" content="利用定时器实现时钟的功能 概述1.先画好时钟，时针、分针、秒针等。2.运用定时器，获取当前时间，并计算时分秒。3.让针转动。">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-29T06:44:08.896Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YYM&#39;s Blog">
+<meta name="twitter:title" content="clock">
+<meta name="twitter:description" content="利用定时器实现时钟的功能 概述1.先画好时钟，时针、分针、秒针等。2.运用定时器，获取当前时间，并计算时分秒。3.让针转动。">
   
     <link rel="alternative" href="/atom.xml" title="YYM&#39;s Blog" type="application/atom+xml">
   
@@ -154,36 +159,79 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-clock" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      clock
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/29/clock/" class="archive-article-date">
+
+        
+        <a href="/2018/05/29/clock/" class="archive-article-date">
   	<time datetime="2018-05-29T05:52:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-29</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/29/clock/">clock</a>
-    </h1>
-  
+        
+		
+		<span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
 
-        <div class="article-info info-on-right">
-          
+      </header>
+    
+         
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>利用定时器实现<a href="https://yuanyanmin.github.io/Code/%E6%97%B6%E9%92%9F%E6%A1%88%E4%BE%8B.html">时钟</a>的功能</p>
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>1.先画好时钟，时针、分针、秒针等。<br>2.运用定时器，获取当前时间，并计算时分秒。<br>3.让针转动。</p>
+<a id="more"></a>
+<h1 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h1><p><a href="https://yuanyanmin.github.io/Code/%E6%97%B6%E9%92%9F%E6%A1%88%E4%BE%8B.html">点此查看</a></p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="画时钟，需要时针、分针、秒针的图片。点此自取"><a href="#画时钟，需要时针、分针、秒针的图片。点此自取" class="headerlink" title="画时钟，需要时针、分针、秒针的图片。点此自取"></a>画时钟，需要时针、分针、秒针的图片。<a href="https://github.com/yuanyanmin/Code/tree/gh-pages/img/clock" target="_blank" rel="noopener">点此自取</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;box&quot;&gt;</span><br><span class="line">    &lt;div id=&quot;hour&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div id=&quot;min&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div id=&quot;second&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>css</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    *&#123;</span><br><span class="line">        margin: 0;</span><br><span class="line">        padding: 0;</span><br><span class="line">    &#125;</span><br><span class="line">    #box &#123;</span><br><span class="line">        width: 600px;</span><br><span class="line">        height: 600px;</span><br><span class="line">        background:url(img/clock/clock.jpg);</span><br><span class="line">        margin:10px auto;</span><br><span class="line">        position: relative;</span><br><span class="line">    &#125;</span><br><span class="line">    #hour,#min,#second &#123;</span><br><span class="line">         position: absolute;                      //子绝父相</span><br><span class="line">         top: 0;</span><br><span class="line">         left: 50%;</span><br><span class="line">         width: 30px;</span><br><span class="line">         height: 600px;</span><br><span class="line">         margin-left: -15px;</span><br><span class="line">    &#125;</span><br><span class="line">    #hour &#123;</span><br><span class="line">        background:url(img/clock/hour.png);</span><br><span class="line">    &#125;</span><br><span class="line">    #min &#123;</span><br><span class="line">        background:url(img/clock/minute.png);</span><br><span class="line">    &#125;</span><br><span class="line">    #second &#123;</span><br><span class="line">        background:url(img/clock/second.png);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="开启定时器，获取当前时间，并计算时分秒"><a href="#开启定时器，获取当前时间，并计算时分秒" class="headerlink" title="开启定时器，获取当前时间，并计算时分秒"></a>开启定时器，获取当前时间，并计算时分秒</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    window.onload = function () &#123;</span><br><span class="line">        // 1. 获取需要的标签</span><br><span class="line">        var hour = document.getElementById(&quot;hour&quot;);</span><br><span class="line">        var min = document.getElementById(&quot;min&quot;);</span><br><span class="line">        var second = document.getElementById(&quot;second&quot;);</span><br><span class="line"></span><br><span class="line">        // 2.开启定时器</span><br><span class="line">        setInterval(function () &#123;</span><br><span class="line">             // 2.1 获取当前的时间戳</span><br><span class="line">            var date = new Date();</span><br><span class="line"></span><br><span class="line">             // 2.2 求出总毫秒数</span><br><span class="line">            var s = date.getSeconds();</span><br><span class="line">            var m = date.getMinutes();</span><br><span class="line">            var h = date.getHours() % 12;     //因为表盘只有12个数字，所以 % 12</span><br><span class="line"></span><br><span class="line">            // console.log(s);</span><br><span class="line">            // console.log(m);</span><br><span class="line">            // console.log(h);</span><br><span class="line"></span><br><span class="line">        &#125;, 10);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="让针转动"><a href="#让针转动" class="headerlink" title="让针转动"></a>让针转动</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 2.3 旋转</span><br><span class="line">hour.style.transform = &apos;rotate(&apos;+ h * 30 +&apos;deg)&apos;;   //360deg / 12 = 30deg</span><br><span class="line">min.style.transform = &apos;rotate(&apos;+ m * 6 +&apos;deg)&apos;;     //360deg / 60 = 6deg</span><br><span class="line">second.style.transform = &apos;rotate(&apos;+ s * 6 +&apos;deg)&apos;;  //360deg / 60 = 6deg</span><br></pre></td></tr></table></figure>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>此时，我们发现<a href="/photo/clock/clock.png">效果图</a><br>应为 下午 2：39。但是时针正对着数字2，按照习惯来说应该在2和3之间。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 2.2 求出总毫秒数</span><br><span class="line">var millS = date.getMilliseconds();</span><br><span class="line">var s = date.getSeconds() + millS / 1000;</span><br><span class="line">var m = date.getMinutes() + s / 60;</span><br><span class="line">var h = date.getHours() % 12 + m / 60;</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>源代码已上传到GitHub，<a href="https://github.com/yuanyanmin/Code/blob/gh-pages/%E6%97%B6%E9%92%9F%E6%A1%88%E4%BE%8B.html" target="_blank" rel="noopener">点此查看</a>。如果对你有帮助，star一下子。</p>
+<p>本文是学习中记录的笔记，难免有错误和疏漏，欢迎大家指出。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/photo/wx.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -195,185 +243,107 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yuanyanmin.github.io/2018/05/29/clock/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/27/essay/" class="archive-article-date">
-  	<time datetime="2018-05-27T01:32:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-27</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/05/27/essay/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Origin Dream</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/27/essay/">Origin Dream</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">音乐</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/26/comment/" class="archive-article-date">
-  	<time datetime="2018-05-26T12:25:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/26/comment/">JS发表评论小例子</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">learning-JS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/25/catelog/" class="archive-article-date">
-  	<time datetime="2018-05-25T10:51:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/25/catelog/">Hexo 实现文章目录</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/25/FirstEssay/" class="archive-article-date">
-  	<time datetime="2018-05-25T07:30:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/25/FirstEssay/">Hexo 初次学习</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
     
 
@@ -399,8 +369,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
