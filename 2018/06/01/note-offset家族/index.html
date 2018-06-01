@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="YYM&#39;s Blog">
 <meta property="og:description" content="offset 家族介绍。 offset可以方便的获取元素尺寸。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-01T09:11:34.528Z">
+<meta property="og:updated_time" content="2018-06-01T11:16:48.430Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="note-offset家族">
 <meta name="twitter:description" content="offset 家族介绍。 offset可以方便的获取元素尺寸。">
@@ -202,6 +202,12 @@
 <h3 id="offsetParent-返回该对象的父级-带有定位-不一定是亲爸爸"><a href="#offsetParent-返回该对象的父级-带有定位-不一定是亲爸爸" class="headerlink" title="offsetParent  返回该对象的父级 (带有定位)不一定是亲爸爸"></a>offsetParent  返回该对象的父级 (带有定位)不一定是亲爸爸</h3><p>offsetParent就是距离该子元素最近的进行过定位的父元素（position：absolute  relative fixed）<br>如果其父元素中不存在定位则offsetParent为：body元素</p>
 <p><strong>offsetParent 与 parentNode 的区别：</strong></p>
 <p>offsetParent 只读，离当前元素最近的一个有定位属性的父节点(有兼容问题)。<br>parentNode 只读，指当前元素的父级节点。</p>
+<h2 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h2><h3 id="clientX-clientY"><a href="#clientX-clientY" class="headerlink" title="clientX/clientY"></a>clientX/clientY</h3><p>clientX/clientY 返回事件触发时鼠标相对于 <strong>元素视口</strong> 的X/Y坐标</p>
+<p><em>这里的元素视口实际上代指就是浏览器，clientX是鼠标距离浏览器左边框的距离，clientY是鼠标距离浏览器上边框的距离。</em></p>
+<h3 id="screenX-screenY"><a href="#screenX-screenY" class="headerlink" title="screenX/screenY"></a>screenX/screenY</h3><p>screenX/screenY  返回事件触发时鼠标相对于 <strong>屏幕</strong> 的X/Y坐标</p>
+<p><em>screenX是鼠标距离显示器屏幕左边框的距离，screenY是鼠标距离显示器屏幕上边框的距离。</em></p>
+<h3 id="pageX-pageY"><a href="#pageX-pageY" class="headerlink" title="pageX/pageY"></a>pageX/pageY</h3><p>返回事件触发时鼠标相对于 <strong>文档</strong> 的X/Y坐标</p>
+<p><em>所谓文档可以简单的理解为浏览器中的页面内容，pageX是鼠标距离文档左侧的距离，pageY是鼠标距离文档上侧的距离，如果我们将鼠标悬停在浏览器中间，通过滚轮滚动浏览器，那么尽管没有移动鼠标的位置而pageY一直在变化，因为相对文档顶部的距离一直在变化。</em></p>
 
       
 
