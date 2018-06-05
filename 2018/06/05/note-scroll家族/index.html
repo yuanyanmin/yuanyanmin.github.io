@@ -6,22 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yuanyanmin.github.io">
-  <title>Hexo 实现文章目录 | YYM&#39;s Blog</title>
+  <title>note-scroll家族 | YYM&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Implement the article directory. 前言本文简单结束如何给每个文章添加目录。">
-<meta name="keywords" content="Hexo,Git,node.js">
+  <meta name="description" content="scroll 家族介绍。 网页正文全文宽： document.body.scrollWidth; 网页正文全文高： document.body.scrollHeight; 网页被卷去的高： document.body.scrollTop; 网页被卷去的左： document.body.scrollLeft;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 实现文章目录">
-<meta property="og:url" content="https://yuanyanmin.github.io/2018/05/25/catelog/index.html">
+<meta property="og:title" content="note-scroll家族">
+<meta property="og:url" content="https://yuanyanmin.github.io/2018/06/05/note-scroll家族/index.html">
 <meta property="og:site_name" content="YYM&#39;s Blog">
-<meta property="og:description" content="Implement the article directory. 前言本文简单结束如何给每个文章添加目录。">
+<meta property="og:description" content="scroll 家族介绍。 网页正文全文宽： document.body.scrollWidth; 网页正文全文高： document.body.scrollHeight; 网页被卷去的高： document.body.scrollTop; 网页被卷去的左： document.body.scrollLeft;">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://yuanyanmin.github.io/photo/second/result.png">
-<meta property="og:updated_time" content="2018-05-28T06:11:33.542Z">
+<meta property="og:updated_time" content="2018-06-05T07:46:57.907Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo 实现文章目录">
-<meta name="twitter:description" content="Implement the article directory. 前言本文简单结束如何给每个文章添加目录。">
-<meta name="twitter:image" content="https://yuanyanmin.github.io/photo/second/result.png">
+<meta name="twitter:title" content="note-scroll家族">
+<meta name="twitter:description" content="scroll 家族介绍。 网页正文全文宽： document.body.scrollWidth; 网页正文全文高： document.body.scrollHeight; 网页被卷去的高： document.body.scrollTop; 网页被卷去的左： document.body.scrollLeft;">
   
     <link rel="alternative" href="/atom.xml" title="YYM&#39;s Blog" type="application/atom+xml">
   
@@ -161,20 +158,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-catelog" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-note-scroll家族" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo 实现文章目录
+      note-scroll家族
     </h1>
   
 
         
-        <a href="/2018/05/25/catelog/" class="archive-article-date">
-  	<time datetime="2018-05-25T10:51:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-25</time>
+        <a href="/2018/06/05/note-scroll家族/" class="archive-article-date">
+  	<time datetime="2018-06-05T07:25:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-05</time>
 </a>
         
 		
@@ -184,44 +181,25 @@
 
       </header>
     
-        
-            <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-            <span class="btn-bg"></span>
-            <span class="btn-text">文章导航</span>
-            </p>
-            <div id="toc-article" class="toc-article">
-                <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-                <strong class="toc-title">文章目录</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#正文"><span class="toc-number">2.</span> <span class="toc-text">正文</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#添加CSS样式"><span class="toc-number">2.1.</span> <span class="toc-text">添加CSS样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改article-ejs-文件"><span class="toc-number">2.2.</span> <span class="toc-text">修改article.ejs 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#显示"><span class="toc-number">2.3.</span> <span class="toc-text">显示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#最终效果"><span class="toc-number">3.</span> <span class="toc-text">最终效果</span></a></li></ol>
-           </div>
-           <script type="text/javascript">
-            function showToc(){
-                var toc_article = document.getElementById("toc-article");
-                var show_toc_btn = document.getElementById("show-toc-btn");
-                toc_article.setAttribute("style","display:block");
-                show_toc_btn.setAttribute("style","display:none");
-                };
-            function showBtn(){
-                var toc_article = document.getElementById("toc-article");
-                var show_toc_btn = document.getElementById("show-toc-btn");
-                toc_article.setAttribute("style","display:none");
-                show_toc_btn.setAttribute("style","display:block");
-                };
-           </script>
          
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Implement the article directory.</p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文简单结束如何给每个文章添加目录。</p>
+        <p>scroll 家族介绍。</p>
+<p>网页正文全文宽： document.body.scrollWidth;</p>
+<p>网页正文全文高： document.body.scrollHeight;</p>
+<p>网页被卷去的高： document.body.scrollTop;</p>
+<p>网页被卷去的左： document.body.scrollLeft;</p>
 <a id="more"></a>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><hr>
-<h2 id="添加CSS样式"><a href="#添加CSS样式" class="headerlink" title="添加CSS样式"></a>添加CSS样式</h2><p>在 themes\yilia\source 下的 main.0cf68a.css 文件，添加如下代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/* 新添加的 */</span><br><span class="line">#container .show-toc-btn,#container .toc-article&#123;display:block&#125;</span><br><span class="line">.toc-article&#123;z-index:100;background:#fff;border:1px solid #ccc;max-width:250px;min-width:150px;max-height:500px;overflow-y:auto;-webkit-box-shadow:5px 5px 2px #ccc;box-shadow:5px 5px 2px #ccc;font-size:12px;padding:10px;position:fixed;right:35px;top:129px&#125;.toc-article .toc-close&#123;font-weight:700;font-size:20px;cursor:pointer;float:right;color:#ccc&#125;.toc-article .toc-close:hover&#123;color:#000&#125;.toc-article .toc&#123;font-size:12px;padding:0;line-height:20px&#125;.toc-article .toc .toc-number&#123;color:#333&#125;.toc-article .toc .toc-text:hover&#123;text-decoration:underline;color:#2a6496&#125;.toc-article li&#123;list-style-type:none&#125;.toc-article .toc-level-1&#123;margin:4px 0&#125;.toc-article .toc-child&#123;&#125;@-moz-keyframes cd-bounce-1&#123;0%&#123;opacity:0;-o-transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1)&#125;60%&#123;opacity:1;-o-transform:scale(1.01);-webkit-transform:scale(1.01);-moz-transform:scale(1.01);-ms-transform:scale(1.01);transform:scale(1.01)&#125;100%&#123;-o-transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1)&#125;&#125;@-webkit-keyframes cd-bounce-1&#123;0%&#123;opacity:0;-o-transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1)&#125;60%&#123;opacity:1;-o-transform:scale(1.01);-webkit-transform:scale(1.01);-moz-transform:scale(1.01);-ms-transform:scale(1.01);transform:scale(1.01)&#125;100%&#123;-o-transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1)&#125;&#125;@-o-keyframes cd-bounce-1&#123;0%&#123;opacity:0;-o-transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1)&#125;60%&#123;opacity:1;-o-transform:scale(1.01);-webkit-transform:scale(1.01);-moz-transform:scale(1.01);-ms-transform:scale(1.01);transform:scale(1.01)&#125;100%&#123;-o-transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1)&#125;&#125;@keyframes cd-bounce-1&#123;0%&#123;opacity:0;-o-transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1)&#125;60%&#123;opacity:1;-o-transform:scale(1.01);-webkit-transform:scale(1.01);-moz-transform:scale(1.01);-ms-transform:scale(1.01);transform:scale(1.01)&#125;100%&#123;-o-transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1)&#125;&#125;.show-toc-btn&#123;display:none;z-index:10;width:30px;min-height:14px;overflow:hidden;padding:4px 6px 8px 5px;border:1px solid #ddd;border-right:none;position:fixed;right:40px;text-align:center;background-color:#f9f9f9&#125;.show-toc-btn .btn-bg&#123;margin-top:2px;display:block;width:16px;height:14px;background:url(http://7xtawy.com1.z0.glb.clouddn.com/show.png) no-repeat;-webkit-background-size:100%;-moz-background-size:100%;background-size:100%&#125;.show-toc-btn .btn-text&#123;color:#999;font-size:12px&#125;.show-toc-btn:hover&#123;cursor:pointer&#125;.show-toc-btn:hover .btn-bg&#123;background-position:0 -16px&#125;.show-toc-btn:hover .btn-text&#123;font-size:12px;color:#ea8010&#125;</span><br><span class="line"></span><br><span class="line">.toc-article li ol, .toc-article li ul &#123;</span><br><span class="line">    margin-left: 30px;</span><br><span class="line">&#125;</span><br><span class="line">.toc-article ol, .toc-article ul &#123;</span><br><span class="line">    margin: 10px 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="修改article-ejs-文件"><a href="#修改article-ejs-文件" class="headerlink" title="修改article.ejs 文件"></a>修改article.ejs 文件</h2><p>修改themes\yilia\layout_partial 文件夹下的 article.ejs 文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 目录内容 --&gt;</span><br><span class="line">&lt;% if (!index &amp;&amp; post.toc)&#123; %&gt;</span><br><span class="line">    &lt;p class=&quot;show-toc-btn&quot; id=&quot;show-toc-btn&quot; onclick=&quot;showToc();&quot; style=&quot;display:none&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;btn-bg&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;btn-text&quot;&gt;文章导航&lt;/span&gt;</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line">    &lt;div id=&quot;toc-article&quot; class=&quot;toc-article&quot;&gt;</span><br><span class="line">        &lt;span id=&quot;toc-close&quot; class=&quot;toc-close&quot; title=&quot;隐藏导航&quot; onclick=&quot;showBtn();&quot;&gt;×&lt;/span&gt;</span><br><span class="line">        &lt;strong class=&quot;toc-title&quot;&gt;文章目录&lt;/strong&gt;</span><br><span class="line">        &lt;%- toc(post.content) %&gt;</span><br><span class="line">   &lt;/div&gt;</span><br><span class="line">   &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    function showToc()&#123;</span><br><span class="line">        var toc_article = document.getElementById(&quot;toc-article&quot;);</span><br><span class="line">        var show_toc_btn = document.getElementById(&quot;show-toc-btn&quot;);</span><br><span class="line">        toc_article.setAttribute(&quot;style&quot;,&quot;display:block&quot;);</span><br><span class="line">        show_toc_btn.setAttribute(&quot;style&quot;,&quot;display:none&quot;);</span><br><span class="line">        &#125;;</span><br><span class="line">    function showBtn()&#123;</span><br><span class="line">        var toc_article = document.getElementById(&quot;toc-article&quot;);</span><br><span class="line">        var show_toc_btn = document.getElementById(&quot;show-toc-btn&quot;);</span><br><span class="line">        toc_article.setAttribute(&quot;style&quot;,&quot;display:none&quot;);</span><br><span class="line">        show_toc_btn.setAttribute(&quot;style&quot;,&quot;display:block&quot;);</span><br><span class="line">        &#125;;</span><br><span class="line">   &lt;/script&gt;</span><br><span class="line">&lt;% &#125; %&gt;     </span><br><span class="line">&lt;!-- 目录内容结束 --&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="显示"><a href="#显示" class="headerlink" title="显示"></a>显示</h2><p>如果想在文章中显示目录，则在每篇文章开头中加入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">top: true</span><br></pre></td></tr></table></figure>
-<h1 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h1><p><img src="/photo/second/result.png" alt=""></p>
+<h2 id="处理scroll家族浏览器适配问题"><a href="#处理scroll家族浏览器适配问题" class="headerlink" title="处理scroll家族浏览器适配问题"></a>处理scroll家族浏览器适配问题</h2><h3 id="ie9-和-最新浏览器"><a href="#ie9-和-最新浏览器" class="headerlink" title="ie9+ 和 最新浏览器"></a>ie9+ 和 最新浏览器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">window.pageXOffset; (scrollLeft)</span><br><span class="line">window.pageYOffset; (scrollTop)</span><br></pre></td></tr></table></figure>
+<h3 id="Firefox浏览器-和-其他浏览器"><a href="#Firefox浏览器-和-其他浏览器" class="headerlink" title="Firefox浏览器 和 其他浏览器"></a>Firefox浏览器 和 其他浏览器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.documentElement.scrollTop;</span><br></pre></td></tr></table></figure>
+<h3 id="Chrome浏览器-和-没有声明-DTD"><a href="#Chrome浏览器-和-没有声明-DTD" class="headerlink" title="Chrome浏览器 和 没有声明 DTD "></a>Chrome浏览器 和 没有声明 DTD <doctype></doctype></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.body.scrollTop;</span><br></pre></td></tr></table></figure>
+<h3 id="兼容写法"><a href="#兼容写法" class="headerlink" title="兼容写法"></a>兼容写法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var scrollTop = window.pageYOffset || </span><br><span class="line">                document.documentElement.scrollTop ||</span><br><span class="line">                document.body.scrollTop ||</span><br><span class="line">                0;</span><br><span class="line">var scrollLeft = window.pageXOffset ||</span><br><span class="line">                 document.documentElement.scrollLeft ||</span><br><span class="line">                 document.body.scrollLeft ||</span><br><span class="line">                 0;</span><br></pre></td></tr></table></figure>
+<h2 id="scrollTo-x-y"><a href="#scrollTo-x-y" class="headerlink" title="scrollTo(x,y)"></a>scrollTo(x,y)</h2><p>把内容滚动到指定的坐标</p>
+<p>格式：scrollTo(xpos,ypos)</p>
+<p>xpos 必需；要在窗口文档显示区左上角显示的文档的 x 坐标；</p>
+<p>ypos 必需；要在窗口文档显示区左上角显示的文档的 y 坐标 。</p>
+<p>网页大部分都没有水平滚动条，所以，这个x 不太常用。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>本文是学习中记录的笔记，难免有错误和疏漏，欢迎大家指出。</p>
 
       
 
@@ -256,25 +234,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -325,7 +284,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://yuanyanmin.github.io/2018/05/25/catelog/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yuanyanmin.github.io/2018/06/05/note-scroll家族/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -339,18 +298,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/26/comment/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JS发表评论小例子
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/25/FirstEssay/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo 初次学习</div>
+    <a href="/2018/06/01/note-offset家族/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">note-offset家族</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -369,19 +319,6 @@
             </div>
         </div>
         
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#正文"><span class="toc-number">2.</span> <span class="toc-text">正文</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#添加CSS样式"><span class="toc-number">2.1.</span> <span class="toc-text">添加CSS样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改article-ejs-文件"><span class="toc-number">2.2.</span> <span class="toc-text">修改article.ejs 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#显示"><span class="toc-number">2.3.</span> <span class="toc-text">显示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#最终效果"><span class="toc-number">3.</span> <span class="toc-text">最终效果</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
         
     </div>
 </aside>
