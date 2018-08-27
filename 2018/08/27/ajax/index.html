@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yuanyanmin.github.io">
-  <title>伊卡洛斯的翅膀 | YYM&#39;s Blog</title>
+  <title>ajax 学习笔记 | YYM&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Share a song. 每个人都蕴藏着能量，相信终有一天会发光。朝着梦想勇敢去闯，无论最终结果会怎样… 伊卡洛斯的翅膀TGG">
-<meta name="keywords" content="音乐">
+  <meta name="description" content="前言Ajax 是 “Asynchronous Javascript And XML” 的缩写，中文译作”异步的JavaScript 和 XML”。使用Ajax可以通过Http协议与服务器交互数据，可以在不重新加载整个网页的情况下，对网页的某部分进行更新。">
+<meta name="keywords" content="ajax">
 <meta property="og:type" content="article">
-<meta property="og:title" content="伊卡洛斯的翅膀">
-<meta property="og:url" content="https://yuanyanmin.github.io/2018/05/29/music-two/index.html">
+<meta property="og:title" content="ajax 学习笔记">
+<meta property="og:url" content="https://yuanyanmin.github.io/2018/08/27/ajax/index.html">
 <meta property="og:site_name" content="YYM&#39;s Blog">
-<meta property="og:description" content="Share a song. 每个人都蕴藏着能量，相信终有一天会发光。朝着梦想勇敢去闯，无论最终结果会怎样… 伊卡洛斯的翅膀TGG">
+<meta property="og:description" content="前言Ajax 是 “Asynchronous Javascript And XML” 的缩写，中文译作”异步的JavaScript 和 XML”。使用Ajax可以通过Http协议与服务器交互数据，可以在不重新加载整个网页的情况下，对网页的某部分进行更新。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-01T09:27:46.318Z">
+<meta property="og:updated_time" content="2018-08-27T03:16:26.763Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="伊卡洛斯的翅膀">
-<meta name="twitter:description" content="Share a song. 每个人都蕴藏着能量，相信终有一天会发光。朝着梦想勇敢去闯，无论最终结果会怎样… 伊卡洛斯的翅膀TGG">
+<meta name="twitter:title" content="ajax 学习笔记">
+<meta name="twitter:description" content="前言Ajax 是 “Asynchronous Javascript And XML” 的缩写，中文译作”异步的JavaScript 和 XML”。使用Ajax可以通过Http协议与服务器交互数据，可以在不重新加载整个网页的情况下，对网页的某部分进行更新。">
   
     <link rel="alternative" href="/atom.xml" title="YYM&#39;s Blog" type="application/atom+xml">
   
@@ -37,8 +37,6 @@
 
   
 
-<link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
-<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
 </head>
 
 <body>
@@ -161,20 +159,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-music-two" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ajax" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      伊卡洛斯的翅膀
+      ajax 学习笔记
     </h1>
   
 
         
-        <a href="/2018/05/29/music-two/" class="archive-article-date">
-  	<time datetime="2018-05-29T07:11:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-29</time>
+        <a href="/2018/08/27/ajax/" class="archive-article-date">
+  	<time datetime="2018-08-27T02:45:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-27</time>
 </a>
         
 		
@@ -184,91 +182,47 @@
 
       </header>
     
+        
+            <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+            <span class="btn-bg"></span>
+            <span class="btn-text">文章导航</span>
+            </p>
+            <div id="toc-article" class="toc-article">
+                <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+                <strong class="toc-title">文章目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建-XMLHttpRequest-对象"><span class="toc-number">1.1.</span> <span class="toc-text">创建 XMLHttpRequest 对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#向服务器发送请求"><span class="toc-number">1.2.</span> <span class="toc-text">向服务器发送请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#服务器响应"><span class="toc-number">1.3.</span> <span class="toc-text">服务器响应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#onreadystatechange-事件"><span class="toc-number">1.4.</span> <span class="toc-text">onreadystatechange 事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">1.5.</span> <span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对-Ajax-进行封装"><span class="toc-number">2.</span> <span class="toc-text">对 Ajax 进行封装</span></a></li></ol>
+           </div>
+           <script type="text/javascript">
+            function showToc(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:block");
+                show_toc_btn.setAttribute("style","display:none");
+                };
+            function showBtn(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:none");
+                show_toc_btn.setAttribute("style","display:block");
+                };
+           </script>
          
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Share a song.</p>
-<p>每个人都蕴藏着能量，相信终有一天会发光。朝着梦想勇敢去闯，无论最终结果会怎样…</p>
-<h1 id="伊卡洛斯的翅膀"><a href="#伊卡洛斯的翅膀" class="headerlink" title="伊卡洛斯的翅膀"></a>伊卡洛斯的翅膀</h1><p><em>TGG</em></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Ajax 是 “Asynchronous Javascript And XML” 的缩写，中文译作”异步的JavaScript 和 XML”。使用Ajax可以通过Http协议与服务器交互数据，可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
 <a id="more"></a>
+<h3 id="创建-XMLHttpRequest-对象"><a href="#创建-XMLHttpRequest-对象" class="headerlink" title="创建 XMLHttpRequest 对象"></a>创建 XMLHttpRequest 对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var xmlhttp;</span><br><span class="line">if (window.XMLHttpRequest)</span><br><span class="line">&#123;</span><br><span class="line">    //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码</span><br><span class="line">    xmlhttp=new XMLHttpRequest();</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">    // IE6, IE5 浏览器执行代码</span><br><span class="line">    xmlhttp=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="向服务器发送请求"><a href="#向服务器发送请求" class="headerlink" title="向服务器发送请求"></a>向服务器发送请求</h3><p>我们使用呢 XMLHttpRequest 对象的 open() 和 send() 方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">open(method,url,async)</span><br><span class="line">    method： 请求的类型; GET 或 POST</span><br><span class="line">    url: 文件在服务器上的位置</span><br><span class="line">    async: true(异步) 或 false（同步）</span><br><span class="line"></span><br><span class="line">send(string)</span><br><span class="line">    string： 仅用于POST请求</span><br></pre></td></tr></table></figure></p>
+<h3 id="服务器响应"><a href="#服务器响应" class="headerlink" title="服务器响应"></a>服务器响应</h3><p>如果来自服务器的响应并非 XML,用 responseText 属性<br>如果来自服务器的响应是 XML,而且需要作为 XML 对象进行解析，则使用 responseXML s属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">responseText     // 获得字符串形式的响应数据</span><br><span class="line">responseXML      // 获得 XML 形式的相应数据</span><br></pre></td></tr></table></figure>
+<h3 id="onreadystatechange-事件"><a href="#onreadystatechange-事件" class="headerlink" title="onreadystatechange 事件"></a>onreadystatechange 事件</h3><p>当请求被发送到服务器时，我们需要执行一些基于响应的任务。<br>每当 readyState 改变时，就会触发 onreadystatechange 事件。<br>readyState 属性存有 XMLHttpRequest 的状态信息。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">onreadystatechange</span><br><span class="line">    存储函数，每当 readyState 属性改变时，就会调用该函数。</span><br><span class="line">readyState</span><br><span class="line">    XMLHttpRequest 的状态。从 0-4 发生变化。</span><br><span class="line">    0： 请求未初始化</span><br><span class="line">    1： 服务器连接已建立</span><br><span class="line">    2： 请求已接收</span><br><span class="line">    3： 请求处理中</span><br><span class="line">    4： 请求已完成，且响应已就绪</span><br><span class="line">status</span><br><span class="line">    200： OK</span><br><span class="line">    404:  未找到页面</span><br></pre></td></tr></table></figure>
+<p>在 onreadystatechange 事件中，我们规定当服务器响应已经做好被处理的准备时所执行的任务。<br>当 readyState 等于 4 且状态为 200 时，表示响应已就绪</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">xmlhttp.onreadystatechange = function() &#123;</span><br><span class="line">    if(xmlhttp.readyState === 4 &amp;&amp; xmlhttp.status === 200) &#123;</span><br><span class="line">        document.getElementById(&quot;myDiv&quot;).innerHTML = xmlhttp.responseText;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var xmlhttp;</span><br><span class="line">if(window.XMLHttpRequest) &#123;</span><br><span class="line">    xmlhttp = new XMLHttpRequest();</span><br><span class="line">&#125;else &#123;</span><br><span class="line">    xmhttp = new ActiveXObject(&quot;Microsofo.XMLHTTP&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">xmlhttp.open(&apos;GET&apos;,url,true);</span><br><span class="line"></span><br><span class="line">xmlhttp.send();</span><br><span class="line"></span><br><span class="line">xmlhttp.onreadystateChange = function() &#123;</span><br><span class="line">    if(xmlhttp.readyState === 4 &amp;&amp; xmlhttp.status === 200) &#123;</span><br><span class="line">        document.getElementById(&quot;myDiv&quot;).innerHTML = xmlhttp.responseText;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="对-Ajax-进行封装"><a href="#对-Ajax-进行封装" class="headerlink" title="对 Ajax 进行封装"></a>对 Ajax 进行封装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">/* 封装ajax函数</span><br><span class="line"> * @param &#123;string&#125;opt.type http连接的方式，包括POST和GET两种方式</span><br><span class="line"> * @param &#123;string&#125;opt.url 发送请求的url</span><br><span class="line"> * @param &#123;boolean&#125;opt.async 是否为异步请求，true为异步的，false为同步的</span><br><span class="line"> * @param &#123;object&#125;opt.data 发送的参数，格式为对象类型</span><br><span class="line"> * @param &#123;function&#125;opt.success ajax发送并接收成功调用的回调函数</span><br><span class="line"> */</span><br><span class="line">function ajax(opt) &#123;</span><br><span class="line">    opt = opt || &#123;&#125;;</span><br><span class="line">    opt.method = opt.method.toUpperCase() || &apos;POST&apos;;</span><br><span class="line">    opt.url = opt.url || &apos;&apos;;</span><br><span class="line">    opt.async = opt.async || true;</span><br><span class="line">    opt.data = opt.data || null;</span><br><span class="line">    opt.success = opt.success || function () &#123;&#125;;</span><br><span class="line">    var xmlHttp = null;</span><br><span class="line">    if (XMLHttpRequest) &#123;</span><br><span class="line">        xmlHttp = new XMLHttpRequest();</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        xmlHttp = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">    var params = [];</span><br><span class="line">    for (var key in opt.data)&#123;</span><br><span class="line">        params.push(key + &apos;=&apos; + opt.data[key]);</span><br><span class="line">    &#125;</span><br><span class="line">    var postData = params.join(&apos;&amp;&apos;);</span><br><span class="line">    if (opt.method.toUpperCase() === &apos;POST&apos;) &#123;</span><br><span class="line">        xmlHttp.open(opt.method, opt.url, opt.async);</span><br><span class="line">        xmlHttp.setRequestHeader(&apos;Content-Type&apos;, &apos;application/x-www-form-urlencoded;charset=utf-8&apos;);</span><br><span class="line">        xmlHttp.send(postData);</span><br><span class="line">    &#125;</span><br><span class="line">    else if (opt.method.toUpperCase() === &apos;GET&apos;) &#123;</span><br><span class="line">        xmlHttp.open(opt.method, opt.url + &apos;?&apos; + postData, opt.async);</span><br><span class="line">        xmlHttp.send(null);</span><br><span class="line">    &#125;</span><br><span class="line">    xmlHttp.onreadystatechange = function () &#123;</span><br><span class="line">        if (xmlHttp.readyState === 4 &amp;&amp; xmlHttp.status === 200) &#123;</span><br><span class="line">            opt.success(xmlHttp.responseText);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;s</span><br><span class="line"></span><br><span class="line">// 使用实例</span><br><span class="line"></span><br><span class="line">ajax(&#123;</span><br><span class="line">    method: &apos;POST&apos;,</span><br><span class="line">    url: &apos;test.php&apos;,</span><br><span class="line">    data: &#123;</span><br><span class="line">        name1: &apos;value1&apos;,</span><br><span class="line">        name2: &apos;value2&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    success: function (response) &#123;</span><br><span class="line">       console.log(response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p> PS: 附上<a href="https://blog.csdn.net/c__chao/article/details/78573737" target="_blank" rel="noopener">免费接口网址</a></p>
 
-        <div id="aplayer-uCfftHCl" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-uCfftHCl"),
-            narrow: false,
-            autoplay: true,
-            showlrc: false,
-            music: {
-              title: "伊卡洛斯的翅膀",
-              author: "TGG",
-              url: "http://music.163.com/song/media/outer/url?id=434659430.mp3",
-              pic: "",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-<pre><code>克里特岛虚度时光
-伊卡洛斯不想就这样
-
-蜡和羽毛造的翅膀
-承载梦与希望的重量
-
-在前方在前方那是向往的天堂
-自由比生命更有份量
-追逐光追逐光飞向心中的太阳
-哪怕坠落在汹涌海洋
-
-就算被烤化了翅膀
-
-没什么能束缚梦想
-
-一直走一直走穿超无际的荒凉
-要像花朵绚烂的绽放
-
-一直飞一直飞要去最高的地方
-才能俯瞰世界多宽广
-
-呜
-呜
-
-每个人都蕴藏能量
-相信终有一天会发光
-
-朝着梦想勇敢去闯
-无论最终结果会怎样
-
-在前方在前方那是向往的天堂
-自由比生命更有份量
-
-追逐光追逐光飞向心中的太阳
-哪怕坠落在汹涌海洋
-
-就算被烤化了翅膀
-没什么能束缚梦想
-一直走一直走穿超无际的荒凉
-要像花朵绚烂的绽放
-
-一直飞一直飞要去最高的地方
-才能俯瞰世界多宽广
-
-就算被烤化了翅膀
-
-没什么能束缚梦想
-一直走一直走穿超无际的荒凉
-要像花朵绚烂的绽放
-
-一直飞一直飞要去最高的地方
-才能俯瞰世界多宽广
-
-呜
-
-呜
-</code></pre>
       
 
       
@@ -307,7 +261,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">音乐</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ajax</a>
         		</li>
       		
 		</ul>
@@ -363,7 +317,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://yuanyanmin.github.io/2018/05/29/music-two/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yuanyanmin.github.io/2018/08/27/ajax/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -377,18 +331,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/06/01/note-offset家族/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          note-offset家族
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/29/clock/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">clock</div>
+    <a href="/2018/07/06/锅打灰太狼/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">锅打灰太狼</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -407,6 +352,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建-XMLHttpRequest-对象"><span class="toc-number">1.1.</span> <span class="toc-text">创建 XMLHttpRequest 对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#向服务器发送请求"><span class="toc-number">1.2.</span> <span class="toc-text">向服务器发送请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#服务器响应"><span class="toc-number">1.3.</span> <span class="toc-text">服务器响应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#onreadystatechange-事件"><span class="toc-number">1.4.</span> <span class="toc-text">onreadystatechange 事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">1.5.</span> <span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对-Ajax-进行封装"><span class="toc-number">2.</span> <span class="toc-text">对 Ajax 进行封装</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
