@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yuanyanmin.github.io">
-  <title>Archives: 2018/5 | YYM&#39;s Blog</title>
+  <title>BTC | YYM&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="YYM&#39;s Blog">
-<meta property="og:url" content="https://yuanyanmin.github.io/archives/2018/05/index.html">
+  <meta name="description" content="因XXX的需要，学习比特币相关知识。（蒙圈）">
+<meta name="keywords" content="比特币">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BTC">
+<meta property="og:url" content="https://yuanyanmin.github.io/2018/09/05/BTC/index.html">
 <meta property="og:site_name" content="YYM&#39;s Blog">
+<meta property="og:description" content="因XXX的需要，学习比特币相关知识。（蒙圈）">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://yuanyanmin.github.io/2018/09/05/photo/BTC/guanxi.png">
+<meta property="og:updated_time" content="2018-09-05T04:14:31.435Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YYM&#39;s Blog">
+<meta name="twitter:title" content="BTC">
+<meta name="twitter:description" content="因XXX的需要，学习比特币相关知识。（蒙圈）">
+<meta name="twitter:image" content="https://yuanyanmin.github.io/2018/09/05/photo/BTC/guanxi.png">
   
     <link rel="alternative" href="/atom.xml" title="YYM&#39;s Blog" type="application/atom+xml">
   
@@ -154,264 +161,205 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-BTC" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      BTC
+    </h1>
+  
+
+        
+        <a href="/2018/09/05/BTC/" class="archive-article-date">
+  	<time datetime="2018-09-05T03:11:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-05</time>
+</a>
+        
+		
+		<span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
+
+      </header>
     
+         
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>因XXX的需要，学习比特币相关知识。（蒙圈）</p>
+<a id="more"></a>
+<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ul>
+<li><strong>地址</strong> ：银行卡号</li>
+<li><strong>密码</strong> ：银行卡号密码</li>
+<li><strong>私钥</strong> ：银行卡号 + 银行卡号密码</li>
+<li><strong>助记词</strong> ：私钥</li>
+<li><strong>Keystore</strong> ：加密私钥  Keystore + 密码 = 私钥</li>
+</ul>
+<p><a href="http://8btc.com/thread-74879-1-1.html" target="_blank" rel="noopener">链接1</a></p>
+<h4 id="私钥、公钥、地址的关系"><a href="#私钥、公钥、地址的关系" class="headerlink" title="私钥、公钥、地址的关系"></a>私钥、公钥、地址的关系</h4><p><img src="../photo/BTC/guanxi.png" alt=""></p>
+<ul>
+<li>1.首先使用随机数发生器生成一个『私钥』。一般来说这是一个256bits的数，拥有了这串数字就可以对相应『钱包地址』中的比特币进行操作，所以必须被安全地保存起来。</li>
+<li><p>2.『私钥』经过SECP256K1算法处理生成了『公钥』。SECP256K1是一种椭圆曲线算法，通过一个已知『私钥』时可以算得『公钥』，而『公钥』已知时却无法反向计算出『私钥』。这是保障比特币安全的算法基础。</p>
+</li>
+<li><p>3.同SHA256一样，RIPEMD160也是一种Hash算法，由『公钥』可以计算得到『公钥哈希』，而反过来是行不通的。</p>
+</li>
+<li><p>4.将一个字节的地址版本号连接到『公钥哈希』头部（对于比特币网络的pubkey地址，这一字节为“0”），然后对其进行两次SHA256运算，将结果的前4字节作为『公钥哈希』的校验值，连接在其尾部。</p>
+</li>
+<li><p>5.将上一步结果使用BASE58进行编码(比特币定制版本)，就得到了『钱包地址』。</p>
+</li>
+</ul>
+<p>使用『私钥』对交易进行签名</p>
+<p>使用『公钥』对签名进行验证</p>
+<p><a href="https://blog.csdn.net/jeason29/article/details/51576659" target="_blank" rel="noopener">链接2</a></p>
+<h3 id="比特币钱包的私钥、公钥、地址的生成"><a href="#比特币钱包的私钥、公钥、地址的生成" class="headerlink" title="比特币钱包的私钥、公钥、地址的生成"></a>比特币钱包的私钥、公钥、地址的生成</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">genAddressByBip39() &#123;</span><br><span class="line">    var bip39 = require(&apos;bip39&apos;)</span><br><span class="line">    var crypto = require(&apos;crypto&apos;)</span><br><span class="line">    //  &apos;seed&apos;</span><br><span class="line">    var randomBytes = crypto.randomBytes(16) // 128 bits is enough   生成加密用的伪随机码</span><br><span class="line"></span><br><span class="line">    //  12 word phrase</span><br><span class="line">    var words = randomBytes.toString(&apos;hex&apos;);</span><br><span class="line">    var mnemonic = bip39.entropyToMnemonic(words)     // 用于生成确定性密钥的助记符代码</span><br><span class="line"></span><br><span class="line">    console.log(&quot;--------BIP39---------&quot;)</span><br><span class="line">    console.log(&quot;BIP39 : &quot;, mnemonic)</span><br><span class="line">    console.log(&quot;BIP39 Validation is : &quot;, bip39.validateMnemonic(mnemonic))</span><br><span class="line">    console.log(&quot;--------BTC---------&quot;)</span><br><span class="line"></span><br><span class="line">    var seed = bip39.mnemonicToSeed(mnemonic)</span><br><span class="line">    var bitcoinNetwork = bitcoin.networks.bitcoin.livenet</span><br><span class="line">    var hdMaster = bitcoin.HDNode.fromSeedBuffer(seed, bitcoinNetwork) // seed from above</span><br><span class="line">    var key1 = hdMaster.derivePath(&apos;m/0&apos;)       // m/0 从主私钥（m）衍生出的第一个（0）子密钥。</span><br><span class="line">    var address = key1.getAddress().toString();</span><br><span class="line">    console.log(&quot;BTC Address :&quot;, address);</span><br><span class="line">    var WIF = key1.keyPair.toWIF().toString();     // WIF（Wallet Import Format）格式的私钥</span><br><span class="line">    console.log(&quot;BTC WIF : &quot;, WIF);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://ethfans.org/posts/from-BIP-to-ethereum-HD-wallet" target="_blank" rel="noopener">链接3</a><br><a href="https://github.com/nakinthorn/bip39toWallet/blob/master/src/App.js" target="_blank" rel="noopener">链接4</a><br><a href="https://www.blockcypher.com/dev/bitcoin/?javascript#push-raw-transaction-endpointhttnthttps://www.blockchain.com/api" target="_blank" rel="noopener">链接5</a><br><a href="https://www.jianshu.com/p/30af695404b0" target="_blank" rel="noopener">链接6</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/photo/wx.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/29/music-two/" class="archive-article-date">
-  	<time datetime="2018-05-29T07:11:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/29/music-two/">伊卡洛斯的翅膀</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">音乐</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">比特币</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yuanyanmin.github.io/2018/09/05/BTC/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/29/clock/" class="archive-article-date">
-  	<time datetime="2018-05-29T05:52:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-29</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/29/vue-router/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue-router</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/29/clock/">clock</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">learning-JS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/27/music-one/" class="archive-article-date">
-  	<time datetime="2018-05-27T01:32:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/27/music-one/">Origin Dream</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">音乐</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/26/comment/" class="archive-article-date">
-  	<time datetime="2018-05-26T12:25:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/26/comment/">JS发表评论小例子</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">learning-JS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/25/catelog/" class="archive-article-date">
-  	<time datetime="2018-05-25T10:51:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/25/catelog/">Hexo 实现文章目录</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/25/FirstEssay/" class="archive-article-date">
-  	<time datetime="2018-05-25T07:30:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/25/FirstEssay/">Hexo 初次学习</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
     
 
@@ -437,8 +385,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
