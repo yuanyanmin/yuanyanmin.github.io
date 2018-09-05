@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="YYM&#39;s Blog">
 <meta property="og:description" content="Implement the article directory. 前言本文简单结束如何给每个文章添加目录。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://yuanyanmin.github.io/photo/second/result.png">
+<meta property="og:image" content="https://yuanyanmin.github.io/2018/05/25/catelog/photo/second/result.png">
 <meta property="og:updated_time" content="2018-05-28T06:11:33.542Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 实现文章目录">
 <meta name="twitter:description" content="Implement the article directory. 前言本文简单结束如何给每个文章添加目录。">
-<meta name="twitter:image" content="https://yuanyanmin.github.io/photo/second/result.png">
+<meta name="twitter:image" content="https://yuanyanmin.github.io/2018/05/25/catelog/photo/second/result.png">
   
     <link rel="alternative" href="/atom.xml" title="YYM&#39;s Blog" type="application/atom+xml">
   
@@ -221,7 +221,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 目录内容 --&gt;</span><br><span class="line">&lt;% if (!index &amp;&amp; post.toc)&#123; %&gt;</span><br><span class="line">    &lt;p class=&quot;show-toc-btn&quot; id=&quot;show-toc-btn&quot; onclick=&quot;showToc();&quot; style=&quot;display:none&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;btn-bg&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;btn-text&quot;&gt;文章导航&lt;/span&gt;</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line">    &lt;div id=&quot;toc-article&quot; class=&quot;toc-article&quot;&gt;</span><br><span class="line">        &lt;span id=&quot;toc-close&quot; class=&quot;toc-close&quot; title=&quot;隐藏导航&quot; onclick=&quot;showBtn();&quot;&gt;×&lt;/span&gt;</span><br><span class="line">        &lt;strong class=&quot;toc-title&quot;&gt;文章目录&lt;/strong&gt;</span><br><span class="line">        &lt;%- toc(post.content) %&gt;</span><br><span class="line">   &lt;/div&gt;</span><br><span class="line">   &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    function showToc()&#123;</span><br><span class="line">        var toc_article = document.getElementById(&quot;toc-article&quot;);</span><br><span class="line">        var show_toc_btn = document.getElementById(&quot;show-toc-btn&quot;);</span><br><span class="line">        toc_article.setAttribute(&quot;style&quot;,&quot;display:block&quot;);</span><br><span class="line">        show_toc_btn.setAttribute(&quot;style&quot;,&quot;display:none&quot;);</span><br><span class="line">        &#125;;</span><br><span class="line">    function showBtn()&#123;</span><br><span class="line">        var toc_article = document.getElementById(&quot;toc-article&quot;);</span><br><span class="line">        var show_toc_btn = document.getElementById(&quot;show-toc-btn&quot;);</span><br><span class="line">        toc_article.setAttribute(&quot;style&quot;,&quot;display:none&quot;);</span><br><span class="line">        show_toc_btn.setAttribute(&quot;style&quot;,&quot;display:block&quot;);</span><br><span class="line">        &#125;;</span><br><span class="line">   &lt;/script&gt;</span><br><span class="line">&lt;% &#125; %&gt;     </span><br><span class="line">&lt;!-- 目录内容结束 --&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="显示"><a href="#显示" class="headerlink" title="显示"></a>显示</h2><p>如果想在文章中显示目录，则在每篇文章开头中加入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">top: true</span><br></pre></td></tr></table></figure>
-<h1 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h1><p><img src="/photo/second/result.png" alt=""></p>
+<h1 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h1><p><img src="/2018/05/25/catelog/photo/second/result.png" alt=""></p>
 
       
 
@@ -489,10 +489,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">比特币</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
@@ -502,6 +498,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">node.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">比特币</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -517,11 +517,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">scroll</a>
+                <a href="javascript:void(0)" class="js-tag color2">offset</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">offset</a>
+                <a href="javascript:void(0)" class="js-tag color2">scroll</a>
               </li>
              
               <li class="article-tag-list-item">
