@@ -6,6 +6,8 @@ tags:
  - canvas
 categories:
 ---
+**天气**： :sunny:
+**心情**： :laughing:
 
 HTML5 canvas 元素用于图形的绘制，通过脚本 (通常是JavaScript)来完成
 
