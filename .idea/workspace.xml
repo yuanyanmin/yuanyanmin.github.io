@@ -104,8 +104,10 @@
     <session id="816606021">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -114,7 +116,7 @@
           <entry key="ejs" value="2" />
           <entry key="js" value="1" />
           <entry key="json" value="1" />
-          <entry key="md" value="1" />
+          <entry key="md" value="3" />
           <entry key="scss" value="1" />
         </counts>
       </usages-collector>
@@ -124,28 +126,28 @@
           <entry key="EJS" value="2" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="1" />
-          <entry key="Markdown" value="1" />
+          <entry key="Markdown" value="3" />
           <entry key="SCSS" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="33" />
+          <entry key="css" value="42" />
           <entry key="ejs" value="16" />
           <entry key="js" value="121" />
           <entry key="json" value="4" />
-          <entry key="md" value="27" />
+          <entry key="md" value="4143" />
           <entry key="scss" value="9" />
           <entry key="yml" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="33" />
+          <entry key="CSS" value="42" />
           <entry key="EJS" value="16" />
           <entry key="JSON" value="4" />
           <entry key="JavaScript" value="121" />
-          <entry key="Markdown" value="27" />
+          <entry key="Markdown" value="4143" />
           <entry key="SCSS" value="9" />
           <entry key="YAML" value="13" />
         </counts>
@@ -158,94 +160,26 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/canvas.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="150">
-                <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+              <first_editor relative-caret-position="200">
+                <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="18" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
               </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/yilia/source-src/css/tags-cloud.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-575">
-              <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/themes/yilia/source/main.0cf68a.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/markdown-it-emoji/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/yilia/layout/page.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="62" selection-start-column="62" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/archives/index.md">
+        <entry file="file://$PROJECT_DIR$/source/_posts/js-创建对象.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="100">
-                <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <first_editor relative-caret-position="248">
+                <caret line="280" lean-forward="true" selection-start-line="280" selection-end-line="280" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
               </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/yilia/layout/post.ejs">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="9" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-48">
-              <caret line="122" column="3" selection-start-line="122" selection-start-column="3" selection-end-line="122" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/yilia/_config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3325">
-              <caret line="133" column="28" selection-start-line="133" selection-end-line="133" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -281,6 +215,7 @@
         <option value="$PROJECT_DIR$/themes/yilia/layout/page.ejs" />
         <option value="$PROJECT_DIR$/source/_posts/canvas.md" />
         <option value="$PROJECT_DIR$/themes/yilia/source/main.0cf68a.css" />
+        <option value="$PROJECT_DIR$/source/_posts/js-创建对象.md" />
       </list>
     </option>
   </component>
@@ -300,10 +235,10 @@
       <path value="$PROJECT_DIR$/themes/yilia/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="659" />
-    <option name="y" value="16" />
-    <option name="width" value="789" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="533" />
+    <option name="y" value="6" />
+    <option name="width" value="799" />
     <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -312,7 +247,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -320,10 +254,22 @@
               <item name="myBlog" type="b2602c69:ProjectViewProjectNode" />
               <item name="myBlog" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="myBlog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myBlog" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myBlog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myBlog" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="_posts" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -382,17 +328,20 @@
       <workItem from="1537434295305" duration="4663000" />
       <workItem from="1537498523789" duration="2336000" />
       <workItem from="1537838868327" duration="453000" />
-      <workItem from="1537841421631" duration="2949000" />
+      <workItem from="1537841421631" duration="3194000" />
+      <workItem from="1537868729968" duration="2591000" />
+      <workItem from="1537924637556" duration="2551000" />
+      <workItem from="1538043804778" duration="1325000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39603000" />
+    <option name="totallyTimeSpent" value="46315000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
+    <frame x="533" y="6" width="799" height="768" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16964285" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.30226365" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -404,7 +353,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32923076" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.35384616" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2409836" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -552,41 +501,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/JS对象.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="227">
-            <caret line="200" lean-forward="true" selection-start-line="200" selection-end-line="200" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/yilia/_config.yml">
+    <entry file="file://$PROJECT_DIR$/themes/yilia/source-src/css/tags-cloud.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3325">
-          <caret line="133" column="28" selection-start-line="133" selection-end-line="133" selection-end-column="57" />
+        <state relative-caret-position="775">
+          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/node_modules/markdown-it-emoji/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="9" />
+        <state relative-caret-position="550">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48">
-          <caret line="122" column="3" selection-start-line="122" selection-start-column="3" selection-end-line="122" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/yilia/layout/post.ejs">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/yilia/layout/page.ejs">
       <provider selected="true" editor-type-id="text-editor">
@@ -607,29 +534,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/markdown-it-emoji/index.js">
+    <entry file="file://$PROJECT_DIR$/themes/yilia/layout/post.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        <state relative-caret-position="200">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/canvas.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3050">
+          <caret line="122" column="3" selection-start-line="122" selection-start-column="3" selection-end-line="122" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/yilia/source-src/css/tags-cloud.scss">
+    <entry file="file://$PROJECT_DIR$/themes/yilia/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-575">
-          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+        <state relative-caret-position="3325">
+          <caret line="133" column="28" selection-start-line="133" selection-end-line="133" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -637,6 +562,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/JS对象.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="250">
+            <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/canvas.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="200">
+            <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="18" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/js-创建对象.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="248">
+            <caret line="280" lean-forward="true" selection-start-line="280" selection-end-line="280" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
         </state>
       </provider>
     </entry>
