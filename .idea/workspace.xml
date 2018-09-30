@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9cd82de4-99f2-406a-a927-1ff760d61cc8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/source/photo/js原型链/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/photo/js原型链/2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -106,10 +104,11 @@
     <session id="816606021">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.234" value="1" />
           <entry key="project.open.time.3" value="3" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -118,7 +117,7 @@
           <entry key="ejs" value="2" />
           <entry key="js" value="1" />
           <entry key="json" value="1" />
-          <entry key="md" value="6" />
+          <entry key="md" value="7" />
           <entry key="scss" value="1" />
         </counts>
       </usages-collector>
@@ -128,7 +127,7 @@
           <entry key="EJS" value="2" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="1" />
-          <entry key="Markdown" value="6" />
+          <entry key="Markdown" value="7" />
           <entry key="SCSS" value="1" />
         </counts>
       </usages-collector>
@@ -138,7 +137,7 @@
           <entry key="ejs" value="16" />
           <entry key="js" value="121" />
           <entry key="json" value="4" />
-          <entry key="md" value="6197" />
+          <entry key="md" value="9475" />
           <entry key="scss" value="9" />
           <entry key="yml" value="13" />
         </counts>
@@ -149,7 +148,7 @@
           <entry key="EJS" value="16" />
           <entry key="JSON" value="4" />
           <entry key="JavaScript" value="121" />
-          <entry key="Markdown" value="6197" />
+          <entry key="Markdown" value="9475" />
           <entry key="SCSS" value="9" />
           <entry key="YAML" value="13" />
         </counts>
@@ -162,7 +161,7 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/canvas.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="186">
+              <first_editor relative-caret-position="200">
                 <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="18" />
               </first_editor>
               <second_editor>
@@ -172,12 +171,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/_posts/js-继承.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="345">
-                <caret line="69" column="1" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+              <first_editor relative-caret-position="225">
+                <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="18" />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/_posts/Array.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-213">
+                <caret line="87" column="2" selection-start-line="87" selection-start-column="2" selection-end-line="87" selection-end-column="2" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -190,7 +203,7 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/FirstEssay.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="191">
+              <first_editor relative-caret-position="1100">
                 <caret line="44" selection-start-line="44" selection-end-line="44" selection-end-column="29" />
               </first_editor>
               <second_editor>
@@ -233,6 +246,7 @@
         <option value="$PROJECT_DIR$/themes/yilia/source/main.0cf68a.css" />
         <option value="$PROJECT_DIR$/source/_posts/js-创建对象.md" />
         <option value="$PROJECT_DIR$/source/_posts/js-继承.md" />
+        <option value="$PROJECT_DIR$/source/_posts/Array.md" />
       </list>
     </option>
   </component>
@@ -253,9 +267,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="662" />
-    <option name="y" value="4" />
-    <option name="width" value="754" />
+    <option name="x" value="711" />
+    <option name="y" value="10" />
+    <option name="width" value="789" />
     <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -272,24 +286,6 @@
             <path>
               <item name="myBlog" type="b2602c69:ProjectViewProjectNode" />
               <item name="myBlog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myBlog" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myBlog" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="photo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myBlog" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="photo" type="462c0819:PsiDirectoryNode" />
-              <item name="js原型链" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -359,15 +355,18 @@
       <workItem from="1537868729968" duration="2591000" />
       <workItem from="1537924637556" duration="2551000" />
       <workItem from="1538043804778" duration="1465000" />
-      <workItem from="1538100747737" duration="4926000" />
+      <workItem from="1538100747737" duration="8075000" />
+      <workItem from="1538119001652" duration="1274000" />
+      <workItem from="1538274584739" duration="1466000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51381000" />
+    <option name="totallyTimeSpent" value="57270000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="662" y="4" width="754" height="768" extended-state="0" />
+    <frame x="711" y="10" width="789" height="768" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.5321229" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -627,20 +626,8 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/canvas.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="186">
+          <first_editor relative-caret-position="200">
             <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="18" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/FirstEssay.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="191">
-            <caret line="44" selection-start-line="44" selection-end-line="44" selection-end-column="29" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
@@ -651,8 +638,32 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/js-继承.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="345">
-            <caret line="69" column="1" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+          <first_editor relative-caret-position="225">
+            <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="18" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/FirstEssay.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1100">
+            <caret line="44" selection-start-line="44" selection-end-line="44" selection-end-column="29" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/Array.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-213">
+            <caret line="87" column="2" selection-start-line="87" selection-start-column="2" selection-end-line="87" selection-end-column="2" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
