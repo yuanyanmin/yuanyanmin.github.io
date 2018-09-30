@@ -6,3 +6,17 @@
    /*vertical-align: -0.1em !important;*/
    line-height: 1.5em !important;
  }
+
+#container .left-col {
+   background: #d8d6de !important;
+}
+
+#container .left-col .overlay {
+  height: 300px;
+  background: url("img/left-nav.jpg") no-repeat !important;
+  -webkit-background-size: 100% auto !important;
+  -moz-background-size: 100% auto !important;
+  background-size: 100% auto !important;
+  position: absolute;
+  opacity: 1;
+}
