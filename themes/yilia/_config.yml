@@ -4,6 +4,7 @@ menu:
   主页: /
   归档: /archives/
   随笔: /tags/随笔
+  题库: /categories/刷题   # 博客首页展示文本：访问路径/自定义归档名称
   #分类: /categories/
 
 # SubNav
