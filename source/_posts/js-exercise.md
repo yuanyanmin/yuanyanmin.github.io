@@ -4,7 +4,7 @@ title: js-每日一题
 date: 2018-09-16 13:18:11
 tags:
  - js每日一题
-categories:
+categories: 刷题
 ---
 
 推荐学习网站 [FreeCodeCamp](https://www.freecodecamp.cn)
