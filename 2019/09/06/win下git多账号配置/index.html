@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://yuanyanmin.github.io">
-  <title>Tag: jq | YYM&#39;s Blog</title>
+  <title>win下git多账号配置 | YYM&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="YYM&#39;s Blog">
-<meta property="og:url" content="https://yuanyanmin.github.io/tags/jq/index.html">
+  <meta name="description" content="本文主要记录了如何在一台电脑上配置多个git账号">
+<meta name="keywords" content="-随笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="win下git多账号配置">
+<meta property="og:url" content="https://yuanyanmin.github.io/2019/09/06/win下git多账号配置/index.html">
 <meta property="og:site_name" content="YYM&#39;s Blog">
+<meta property="og:description" content="本文主要记录了如何在一台电脑上配置多个git账号">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-09-06T03:58:57.941Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YYM&#39;s Blog">
+<meta name="twitter:title" content="win下git多账号配置">
+<meta name="twitter:description" content="本文主要记录了如何在一台电脑上配置多个git账号">
   
     <link rel="alternative" href="/atom.xml" title="YYM&#39;s Blog" type="application/atom+xml">
   
@@ -160,58 +165,216 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-win下git多账号配置" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/18/jq-mouseout-与-click-事件冲突/" class="archive-article-date">
-  	<time datetime="2018-12-18T08:13:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-18</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/18/jq-mouseout-与-click-事件冲突/">jq mouseout 与 click 事件冲突</a>
+    <h1 class="article-title" itemprop="name">
+      win下git多账号配置
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/09/06/win下git多账号配置/" class="archive-article-date">
+  	<time datetime="2019-09-06T02:57:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
+</a>
+        
+		<!--
+		<span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
+-->
+      </header>
+    
+         
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文主要记录了如何在一台电脑上配置多个git账号</p>
+<a id="more"></a>
+<h3 id="首次生成ssh">首次生成ssh</h3>
+<p>1.默认情况下，用户的 ssh 密钥存储在其 ~/.ssh 目录下，进入该目录并列出其中的内容，可以查看自己是否已拥有密钥：</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> ~<span class="string">/.ssh</span></span><br><span class="line"><span class="keyword">ls</span></span><br></pre></td></tr></table></figure>
+<p>2.需要 id_rsa 或 id_dsa 命名的文件，其中一个带有 .pub 扩展名。.pub 文件是你的公钥，另一个则是私钥。<br>
+如果没有这样的文件，或者没有 .ssh 目录，则需要生成它们。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ssh-keygen</span> <span class="selector-tag">-t</span> <span class="selector-tag">rsa</span> <span class="selector-tag">-C</span> "<span class="selector-tag">youremail</span>@<span class="keyword">qq</span>.<span class="keyword">com</span>"</span><br></pre></td></tr></table></figure>
+<p>3.添加密钥到ssh</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-<span class="keyword">add</span><span class="bash"> ~/.ssh/id_rsa</span></span><br></pre></td></tr></table></figure>
+<p>4.在 github 上添加 ssh 密钥，即 “id_rsa.pub” 里的公钥</p>
+<p>5.测试</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ssh</span> <span class="selector-tag">git</span>@<span class="keyword">github</span>.<span class="keyword">com</span></span><br></pre></td></tr></table></figure>
+<h3 id="多个-ssh-key-管理">多个 ssh key 管理</h3>
+<p>在 ~/.ssh 目录下新建一个 config 文件配置</p>
+<p>1.生成 ssh</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ssh-keygen</span> <span class="selector-tag">-t</span> <span class="selector-tag">rsa</span> <span class="selector-tag">-C</span> "<span class="selector-tag">youremail</span>@<span class="keyword">gmail</span>.<span class="keyword">com</span>"</span><br></pre></td></tr></table></figure>
+<p>注意：不要一路回车，在选择存放key的时候写个名字，例如 id_rsa_gitlab</p>
+<p>2.添加私钥</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-<span class="keyword">add</span><span class="bash"> ~/.ssh/id_rsa</span></span><br><span class="line"><span class="bash">ssh-add ~/.ssh/id_rsa_gitlab</span></span><br></pre></td></tr></table></figure>
+<p>3.创建并修改 config 文件</p>
+<p>在 win 下创建一个 txt 文本，然后将名字和后缀一起改成 config 即可</p>
+<p>添加内容</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># one                                                                       </span></span><br><span class="line">Host gitlab               # 域名地址的别名</span><br><span class="line">HostName git.xxx.com      # 这里填写公司的 git 网址即可、真实的域名地址</span><br><span class="line">User gitlab               # 配置使用用户名</span><br><span class="line">IdentityFile ~/.ssh/id_rsa_gitlab   # id_rsa 的地址</span><br><span class="line"><span class="comment"># two                                                                           </span></span><br><span class="line">Host github</span><br><span class="line">HostName github.com</span><br><span class="line">User github</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+<p>4.测试</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ssh</span> -T git<span class="variable">@github</span>   // 或者 ssh -vT git<span class="variable">@github</span>  -v 是输出编译信息</span><br><span class="line">ssh -T git<span class="variable">@gitlab</span></span><br></pre></td></tr></table></figure>
+<p>5.clone 项目到本地</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 之前的方式：单个账号</span></span><br><span class="line">git <span class="keyword">clone</span> <span class="title">git</span>@github.com:firstAccount/xxx.git <span class="comment"># 缺省config配置时</span></span><br><span class="line">git <span class="keyword">clone</span> <span class="title">git</span>@github:firstAccount/xxx.git  <span class="comment"># config 配置后，等价于第一句</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 现在的方式：git clone git@域名的别称:用户名/项目名</span></span><br><span class="line">git <span class="keyword">clone</span> <span class="title">git</span>@gitlab:secondAccount/xxx.git   <span class="comment"># 使用域名地址的别名来区分</span></span><br></pre></td></tr></table></figure>
+<p>6.配置本地 git 用户名和邮箱（可选）</p>
+<pre><code># 全局配置
+git config --global user.name &quot;yourName&quot;
+git config --global user.email &quot;yourEmail@qq.com&quot;
+
+# 局部配置
+git config user.name &quot;yourName&quot;
+git config user.email &quot;yourEmail@qq.com&quot;
+</code></pre>
+<p>没有局部配置，默认用全局配置，否则优先使用局部配置</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/photo/wx.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">jq</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-随笔</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yuanyanmin.github.io/2019/09/06/win下git多账号配置/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/09/06/hexo在多台电脑上提交和更新/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo在多台电脑上提交和更新</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
+
 
     
 
@@ -241,9 +404,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
