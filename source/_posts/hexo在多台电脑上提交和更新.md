@@ -1,7 +1,7 @@
 ---
 title: hexo在多台电脑上提交和更新
 date: 2019-09-06 09:57:15
-tags: -随笔
+tags: 随笔
 categories:
 toc:
 ---
