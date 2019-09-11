@@ -12,7 +12,7 @@ node 的模块化编程思想，import 与 require 都是被模块化所使用�
 - require 是 AMD 规范引入方式  运行时加载
 - import  是 es6 的语法标准    编译时加载 
 
-这这这，这种当然是看[大佬们的博客](!http://www.ruanyifeng.com/blog/2015/11/circular-dependency.html)了.
+这这这，这种当然是看[大佬们的博客](http://www.ruanyifeng.com/blog/2015/11/circular-dependency.html)了.
 
 <!--more-->
 
@@ -74,6 +74,6 @@ export {newa as a, b, c}
 
 ```
 
-[阮一峰es6](!http://es6.ruanyifeng.com/#docs/module-loader)
+[阮一峰es6](http://es6.ruanyifeng.com/#docs/module-loader)
 
-[转自](!https://www.imooc.com/article/22371?block_id=tuijian_wz)
+[转自](https://www.imooc.com/article/22371?block_id=tuijian_wz)
