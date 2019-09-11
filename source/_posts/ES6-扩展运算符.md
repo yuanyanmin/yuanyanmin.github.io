@@ -50,7 +50,7 @@ d.name = 'yun';
 console.log(c,d);      // {name: {firstName: 'yun'}} {name:  'yun'}
 ```
 
-[对象的扩展运算符参考链接](!http://es6.ruanyifeng.com/#docs/object#%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6)
+[对象的扩展运算符参考链接](http://es6.ruanyifeng.com/#docs/object#%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6)
 
 **那么 展开运算符... 算作什么拷贝呢**
 
@@ -61,7 +61,7 @@ console.log(c,d);      // {name: {firstName: 'yun'}} {name:  'yun'}
 
 > 简单来说，假设 B 复制了 A，当 A 修改时，B也跟着变化，则为浅拷贝，若不变，则为深拷贝。
 
-[深拷贝与浅拷贝参考链接](!https://www.cnblogs.com/echolun/p/7889848.html)
+[深拷贝与浅拷贝参考链接](https://www.cnblogs.com/echolun/p/7889848.html)
 
 ### 数组的扩展运算符
 
@@ -113,4 +113,4 @@ first // 1,
 rest  // [2,3,4,5]
 ```
 
-[数组的扩展参考链接](!http://es6.ruanyifeng.com/#docs/array)
+[数组的扩展参考链接](http://es6.ruanyifeng.com/#docs/array)
