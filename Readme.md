@@ -32,7 +32,8 @@
 ```
 * 5.常用命令
 ```
-  hexo new page aboutme  # 新建 aboutme 文章
+  hexo new "postName"  #新建文章
+  hexo new page "pageName" #新建页面
   hexo s -g   #生成并本地预览
   hexo d -g   #生成并上传
 ```
