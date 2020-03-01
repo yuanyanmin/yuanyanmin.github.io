@@ -16,7 +16,7 @@ toc:
 <!--more-->
 
 **错误信息**
-![](/photo/mongdb/error_1.png)
+![](/photo/mongodb/error_1.jpg)
 
 **解决方法**
 ```
@@ -73,7 +73,7 @@ MongoDB 内置角色如下：
 4. 备份恢复角色：backup、restore;
 5. 所有数据库角色：readAnyDatabase、readWriteDatabase、userAdminDatabase、dbAdminAnyDatabase
 6. 超级用户角色：root(这里还有几个间接或直接提供了系统超级用户的访问（dbOwner、userAdmin、userAdminAnyDatabase）)
-7. 内部角色：_system
+7. 内部角色：__system
 
 **实例**
 
