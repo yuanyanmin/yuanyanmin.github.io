@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="YYM&#39;s Blog">
 <meta property="og:description" content="开始复习神奇的解构赋值">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-11-10T09:35:43.580Z">
+<meta property="og:updated_time" content="2021-11-10T10:30:29.080Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6-变量的解构赋值">
 <meta name="twitter:description" content="开始复习神奇的解构赋值">
@@ -238,6 +238,10 @@
 <li>4 指定默认值(只有当一个数组成员炎等等于undefined，默认值才会生效)</li>
 </ul>
 <figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [x, y = <span class="string">'b'</span>] = [<span class="string">'a'</span>]</span><br><span class="line">x <span class="comment">// a</span></span><br><span class="line">y <span class="comment">// b</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [x] = [<span class="literal">null</span>]</span><br><span class="line">x <span class="comment">// null</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>5 扩展运算符参数必须放在最后一位</li>
+</ul>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let [a, ...b, c] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// error:Uncaught SyntaxError: Rest element must be last element</span></span><br></pre></td></tr></table></figure>
 <h4 id="对象的解构赋值">对象的解构赋值</h4>
 <blockquote>
 <p>与数组有个不同，数组是按次序排列的，变量值由位置决定，而对象，变量必须与属性同名，才能取到正确的值</p>
